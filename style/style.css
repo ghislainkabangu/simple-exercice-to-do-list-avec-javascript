@@ -1,40 +1,98 @@
 body {
     margin: auto;
-    text-align: center;
-    background-color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-h2 {
-    color: orangered;
+section {
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 6px;
+    background-color: rgb(129, 188, 41);
+    width: 480px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+section h1 {
+    text-align: center;
+    color: white;
+}
+
+section p {
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+    color: white;
+}
+
+h6 {
+    text-align: center;
+    color: black;
+}
+
+form {
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+form input {
+    flex-basis: 70%;
+    padding: 10px 0 10px 10px;
+    outline: none;
+    height: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form button {
+    flex-basis: 20%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
 }
 
 div {
-    width: 80%;
     margin: auto;
-    margin-top: 30px;
-    background-color:whitesmoke;
+    width: 95%;
+    margin-top: 10px;
+    background-color: white;
     color: black;
-    border-radius: 5px;
+    border-radius: 3px;
     text-align: left;
     display: flex;
     justify-content: space-around;
     transition: ease-in-out 0.5s;
-}
-
-div:hover {
-    background-color: gray;
-    color: white;
-    box-shadow: 5px 5px 2px gainsboro;
-    transition: ease-in-out 0.5s;
+    animation: anim 0.5s linear;
 }
 
 div button {
     height: 20px;
     position: relative;
     top: 15px;
+
 }
 
 div p {
     float: left;
+    text-align: left;
+    width: 50%;
+    word-wrap: break-word;
+}
+
+@keyframes anim {
+    from {
+        transform: translateY(50px);
+    }
+}
+
+@media screen and (max-width:500px) {
+    section {
+        width: 85%;
+    }
 }
